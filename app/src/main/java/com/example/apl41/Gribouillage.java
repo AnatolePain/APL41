@@ -7,5 +7,6 @@ import android.view.View;
 public class Gribouillage extends View {
     public Gribouillage(Context context, AttributeSet attrs) {
         super(context, attrs);
+
     }
 }
