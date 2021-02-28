@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:id="@+id/grand_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimary"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grand_rectangle"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_margin="20dp"
+            android:layout_weight="@android:integer/config_mediumAnimTime"
+            android:text="@string/mitre"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginVertical="20dp"
+            android:layout_weight="@android:integer/config_mediumAnimTime"
+            android:text="@string/biseau"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_margin="20dp"
+            android:layout_weight="@android:integer/config_mediumAnimTime"
+            android:text="@string/arrondi"
+            />
+
+
+    </RadioGroup>
+
+</RelativeLayout>

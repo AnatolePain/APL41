@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">APL41</string>
+    <string name="ok_button">OK</string>
+    <string name="num_03">03</string>
+    <string name="_03">03</string>
+    <string name="_02">02</string>
+    <string name="_01">01</string>
+    <string name="__02">02</string>
+    <string name="upArrow_01">Λ</string>
+    <string name="OButton">O</string>
+    <string name="mitre">Mitre</string>
+    <string name="biseau">Biseau</string>
+    <string name="arrondi">Arrondi</string>
 </resources>

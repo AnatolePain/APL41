@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TableRow
+        android:layout_weight="@android:integer/config_longAnimTime"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:id="@+id/zone_de_text"
+            android:inputType="text"
+            android:layout_span="2"
+            android:gravity="top"
+            android:text="@string/_03"
+            />
+
+    </TableRow>
+
+    <TableRow >
+
+        <EditText
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill_horizontal"
+            />
+
+        <Button
+            android:text="@string/ok_button"
+            />
+
+    </TableRow>
+
+
+
+</TableLayout>
