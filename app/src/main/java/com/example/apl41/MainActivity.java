@@ -16,13 +16,14 @@ public class MainActivity extends Activity {
         //Tp03_ex01_01
         /*
         ImageView image = this.findViewById(R.id.picture_arrow);
-        image.setImageResource(R.drawable.fleche_gauche);
+        image.setImageResource(R.drawable.fleche_droite);
         Tp03_ex01_01 controleur = new Tp03_ex01_01(image);
         Button bouton1 = this.findViewById(R.id.right_arrow);
         Button bouton2 = this.findViewById(R.id.left_arrow);
         bouton1.setOnClickListener(controleur);
         bouton2.setOnClickListener(controleur);
         */
+
 
         //Tp03_ex02_01 (R.layout.tp02_ex02_01)
         /*
@@ -32,9 +33,8 @@ public class MainActivity extends Activity {
         radioGroup.setOnCheckedChangeListener(controleur);
         */
 
-        Tp04_ex01_02 controleur = new Tp04_ex01_02();
         Tp04_ex01_01 vue = this.findViewById(R.id.poids);
+        Tp04_ex01_02 controleur = new Tp04_ex01_02(vue);
         vue.setOnTouchListener(controleur);
-
     }
 }

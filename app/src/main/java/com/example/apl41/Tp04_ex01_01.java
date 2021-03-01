@@ -25,5 +25,13 @@ public class Tp04_ex01_01 extends View {
         Paint purpleCircle = new Paint();
         purpleCircle.setColor(0xff7d007d);
         canvas.drawCircle(550,300, 90,purpleCircle);
+
+        //for()
     }
+
+    public void update(){
+
+    }
+
+
 }

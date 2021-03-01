@@ -19,7 +19,7 @@ public class Tp03_ex01_01 implements View.OnClickListener {
 
         Resources res = view.getResources();
         String id = res.getResourceEntryName(view.getId());
-
+        System.out.println("id= " + id);
         if(id.equals("right_arrow")){
             image.setImageResource(R.drawable.fleche_droite);
         }else if(id.equals("left_arrow")){
