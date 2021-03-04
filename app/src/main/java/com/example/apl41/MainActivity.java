@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.tp04_ex02_01);
+        this.setContentView(R.layout.tp05_ex01_01);
 
         //Tp03_ex01_01
         /*
@@ -41,10 +41,12 @@ public class MainActivity extends Activity {
         vue.setOnTouchListener(controleur);
         */
 
+
         //tp04_ex02_02
+        /*
         TableLayout tb = this.findViewById(R.id.grille);
         Tp04_ex02_02 vue = new Tp04_ex02_02(tb);
         Tp04_ex02_01 controleur = new Tp04_ex02_01(vue);
-        //vue.
+        */
     }
 }
