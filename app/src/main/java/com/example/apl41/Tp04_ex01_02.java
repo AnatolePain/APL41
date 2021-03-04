@@ -14,18 +14,35 @@ public class Tp04_ex01_02 implements View.OnTouchListener {
         this.vue = v;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
 
-        System.out.println("event : " + MotionEvent.actionToString(motionEvent.getActionMasked()));
-        System.out.println("pointer count = " + motionEvent.getPointerCount());
+        int action = motionEvent.getActionMasked();
 
-        if(motionEvent.getActionMasked() == MotionEvent.ACTION_MOVE){
-            this.vue.update();
-            //Log.d("DEBUG","getHistroricalX() = " + motionEvent.getHistoricalX());
+        if (action == MotionEvent.ACTION_DOWN){
+            this.vue.addPointer(motionEvent.getPointerId(0),  motionEvent.getX(), motionEvent.getY());
         }
 
+        if(action == MotionEvent.ACTION_POINTER_DOWN ){
+            int index = motionEvent.getActionIndex();
+            this.vue.addPointer(motionEvent.getPointerId(index),  motionEvent.getX(index), motionEvent.getY(index));
+        }
+
+        if(action == MotionEvent.ACTION_MOVE){
+            for(int i = 0 ; i < motionEvent.getPointerCount() ; i++){
+                this.vue.movePointer(motionEvent.getPointerId(i),  motionEvent.getX(i), motionEvent.getY(i));
+            }
+        }
+
+        if(action == MotionEvent.ACTION_POINTER_UP){
+            this.vue.remove(motionEvent.getPointerId(motionEvent.getActionIndex()));
+        }
+
+        if(action == MotionEvent.ACTION_UP){
+            for(int i = 0 ; i < motionEvent.getPointerCount() ; i++){
+                this.vue.removeAllPointer(motionEvent.getPointerId(i));
+            }
+        }
 
         return true;
     }
