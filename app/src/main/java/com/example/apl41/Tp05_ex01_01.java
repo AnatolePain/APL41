@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class Tp05_ex01_01 extends View {
@@ -15,6 +17,7 @@ public class Tp05_ex01_01 extends View {
     private Paint couleur;
     private float reticuleX;
     private float reticuleY;
+    private GestureDetector geste;
 
     public Tp05_ex01_01(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -54,9 +57,10 @@ public class Tp05_ex01_01 extends View {
         canvas.drawPath(reticule,couleur);
     }
 
-    public void drag(float x, float y){
-        Log.d("DEBUG", "x = " + x + " | y = " + y);
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //https://stackoverflow.com/questions/5002049/ontouchevent-vs-ontouch
+        Log.d("DEBUG", "inside onTouchEvent()");
+        return true;
     }
-
-
 }

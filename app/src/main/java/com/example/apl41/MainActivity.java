@@ -51,6 +51,11 @@ public class MainActivity extends Activity {
 
         //tp05_ex01_01
         Tp05_ex01_01 vue = this.findViewById(R.id.reticule);
-        Tp05_ex01_03 controleur = new Tp05_ex01_03(vue);
+        Tp05_ex01_02 controleur1 = new Tp05_ex01_02(vue);
+        //vue.setOnDragListener(controleur1);
+        vue.setOnTouchListener(controleur1);
+        //vue.setOnTouchListener(controleur2);
+
+        //onscroll()
     }
 }
