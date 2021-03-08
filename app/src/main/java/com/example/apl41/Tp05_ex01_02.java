@@ -18,6 +18,8 @@ public class Tp05_ex01_02 implements View.OnTouchListener {
         */
 
 
+
+
         return true;
     }
 }

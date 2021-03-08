@@ -10,6 +10,7 @@
 
 
     <com.example.apl41.Tp05_ex01_01
+        android:id="@+id/reticule"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toRightOf="@+id/my_radio_group"

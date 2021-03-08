@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class Tp05_ex01_01 extends View {
@@ -51,6 +52,10 @@ public class Tp05_ex01_01 extends View {
         //reticule
         reticule.offset(200,300);
         canvas.drawPath(reticule,couleur);
+    }
+
+    public void drag(float x, float y){
+        Log.d("DEBUG", "x = " + x + " | y = " + y);
     }
 
 

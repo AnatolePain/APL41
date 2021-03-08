@@ -48,5 +48,9 @@ public class MainActivity extends Activity {
         Tp04_ex02_02 vue = new Tp04_ex02_02(tb);
         Tp04_ex02_01 controleur = new Tp04_ex02_01(vue);
         */
+
+        //tp05_ex01_01
+        Tp05_ex01_01 vue = this.findViewById(R.id.reticule);
+        Tp05_ex01_03 controleur = new Tp05_ex01_03(vue);
     }
 }
