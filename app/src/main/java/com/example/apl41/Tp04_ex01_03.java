@@ -5,13 +5,11 @@ public class Tp04_ex01_03 {
 
     private float x;
     private float y;
-
     private float radius;
 
     private int color;
 
     private boolean affiche;
-
     private int indice;
 
     public Tp04_ex01_03(){
@@ -44,8 +42,11 @@ public class Tp04_ex01_03 {
         return affiche;
     }
 
-    // --- seter ---
+    public int getIndice() {
+        return indice;
+    }
 
+    // --- seter ---
     public void setX(float x) {
         this.x = x;
     }
@@ -66,14 +67,8 @@ public class Tp04_ex01_03 {
         this.affiche = affiche;
     }
 
-
-
-
-    public int getIndice() {
-        return indice;
-    }
-
     public void setIndice(int indice) {
         this.indice = indice;
     }
+
 }

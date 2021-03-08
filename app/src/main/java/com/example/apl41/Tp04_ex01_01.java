@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class Tp04_ex01_01 extends View {
 
-    List<Tp04_ex01_03> actifPointer = new LinkedList<>();
+    List<Tp04_ex01_03> pointerList = new LinkedList<>();
 
     public Tp04_ex01_01(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -29,7 +29,7 @@ public class Tp04_ex01_01 extends View {
         gris.setColor(Color.DKGRAY);
         canvas.drawRect(0,0,this.getMeasuredWidth(),this.getMeasuredHeight(),gris);
 
-        for(Tp04_ex01_03 poid : actifPointer){
+        for(Tp04_ex01_03 poid : pointerList){
             if(poid.getAffiche()){
                 Paint randomColor = new Paint();
                 randomColor.setColor(poid.getColor());
@@ -41,7 +41,7 @@ public class Tp04_ex01_01 extends View {
     public void addPointer(int id, float x , float y){
 
         try{
-            this.actifPointer.get(id).setAffiche(true);
+            this.pointerList.get(id).setAffiche(true);
         }catch (IndexOutOfBoundsException e){
 
             Tp04_ex01_03 poid = new Tp04_ex01_03();
@@ -55,25 +55,25 @@ public class Tp04_ex01_01 extends View {
             Random r = new Random();
             poid.setColor(r.nextInt());
 
-            actifPointer.add(id,poid);
+            pointerList.add(id,poid);
         }
         this.invalidate();
     }
 
     public void movePointer(int id, float x , float y){
-        this.actifPointer.get(id).setX(x);
-        this.actifPointer.get(id).setY(y);
+        this.pointerList.get(id).setX(x);
+        this.pointerList.get(id).setY(y);
         this.invalidate();
     }
 
     public void remove(int id){
-        this.actifPointer.get(id).setAffiche(false);
+        this.pointerList.get(id).setAffiche(false);
         this.invalidate();
     }
 
     public void removeAllPointer(int id){
-        actifPointer =  new LinkedList<>();
-        actifPointer.clear();
+        pointerList =  new LinkedList<>();
+        pointerList.clear();
         this.invalidate();
     }
 
