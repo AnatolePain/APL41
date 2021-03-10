@@ -57,10 +57,4 @@ public class Tp05_ex01_01 extends View {
         canvas.drawPath(reticule,couleur);
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        //https://stackoverflow.com/questions/5002049/ontouchevent-vs-ontouch
-        Log.d("DEBUG", "inside onTouchEvent()");
-        return true;
-    }
 }

@@ -7,12 +7,14 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class Tp05_ex01_02 implements View.OnTouchListener/*, View.OnDragListener*/{
+public class Tp05_ex01_02 implements View.OnTouchListener{
 
     private Tp05_ex01_01 vue;
+    private Tp05_ex01_03 mGestureDetector;
 
-    public Tp05_ex01_02(Tp05_ex01_01 v){
+    public Tp05_ex01_02(Tp05_ex01_01 v, Tp05_ex01_03 mgd ){
         this.vue = v;
+        this.mGestureDetector = mgd;
     }
 
     @Override
@@ -20,6 +22,14 @@ public class Tp05_ex01_02 implements View.OnTouchListener/*, View.OnDragListener
 
         Log.d("DEBUG", "inside onTouuch() ");
 
+        /*
+        if (mGestureDetector.onTouchEvent(event)) {
+            return true;
+        }
+
+        return super.onTouchEvent(event);
+
+        */
         return true;
     }
 
