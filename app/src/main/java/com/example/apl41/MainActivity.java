@@ -6,13 +6,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.tp05_ex01_01);
+        this.setContentView(R.layout.tp06_ex01_01);
 
         //Tp03_ex01_01
         /*
@@ -50,14 +51,28 @@ public class MainActivity extends Activity {
         */
 
         //tp05_ex01_01
+        /*
         Tp05_ex01_01 vue = this.findViewById(R.id.reticule);
         Tp05_ex01_03 controleur2 = new Tp05_ex01_03();
         Tp05_ex01_02 controleur1 = new Tp05_ex01_02(vue,controleur2);
-
         //vue.setOnDragListener(controleur1);
         vue.setOnTouchListener(controleur1);
         //vue.setOnTouchListener(controleur2);
-
         //onscroll()
+        */
+
+        TextView tv = findViewById(R.id.textViewTp06);
+        Button[] array_button = new Button[4];
+        Tp06_ex01_01 controleur = new Tp06_ex01_01(tv);
+
+        array_button[0] = findViewById(R.id.A);
+        array_button[1] = findViewById(R.id.T);
+        array_button[2] = findViewById(R.id.C);
+        array_button[3] = findViewById(R.id.G);
+        for(int i = 0 ; i < 4 ; i++){
+            array_button[i].setOnClickListener(controleur);
+        }
+
+
     }
 }

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    >
+
+    <TableLayout
+        android:id="@+id/grille"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:stretchColumns="*"
+        android:layout_centerInParent="true"
+        >
+
+        <TableRow
+            android:layout_weight="@android:integer/config_longAnimTime"
+            >
+
+            <Button
+                android:id="@+id/A"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="A"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/background_light"
+                />
+
+            <Button
+                android:id="@+id/T"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="T"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/background_light"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_weight="@android:integer/config_longAnimTime"
+            >
+
+            <Button
+                android:id="@+id/C"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="C"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/background_light"
+                />
+
+            <Button
+                android:id="@+id/G"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="G"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+
+                android:background="@android:color/background_light"
+                />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewTp06"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/background_light"
+        android:layout_alignRight="@+id/grille"
+        android:layout_alignLeft="@+id/grille"
+        android:layout_below="@+id/grille"
+        />
+
+    <!-- <menu
+        tools:context=".Liste"
+        >
+
+        <Item
+            android:title="action_ajouter"
+            android:orderInCategory="100"
+            android:showAsAction="never"
+            />
+
+
+    </menu> -->
+
+</RelativeLayout>
