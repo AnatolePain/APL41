@@ -8,8 +8,6 @@
     android:background="@android:color/holo_green_dark"
     >
 
-    <!--
-
     <TableLayout
         android:id="@+id/grille"
         android:layout_width="350dp"
@@ -85,8 +83,6 @@
         android:layout_alignLeft="@+id/grille"
         android:layout_below="@+id/grille"
         />
-
-    -->
 
     <!-- <menu
         tools:context=".Liste"

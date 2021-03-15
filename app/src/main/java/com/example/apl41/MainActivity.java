@@ -2,6 +2,7 @@ package com.example.apl41;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
@@ -13,7 +14,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.tp06_ex01_01);
+        this.setContentView(R.layout.tp06_ex01_02);
+        //PreferenceManager.setDefaultValues();
 
         //Tp03_ex01_01
         /*
