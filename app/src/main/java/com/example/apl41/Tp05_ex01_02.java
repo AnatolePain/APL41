@@ -22,6 +22,9 @@ public class Tp05_ex01_02 implements View.OnTouchListener{
 
         Log.d("DEBUG", "inside onTouuch() ");
 
+        Tp05_ex01_01 ma_vue = (Tp05_ex01_01)v;
+        ma_vue.refresh(event.getX(),event.getY());
+
         /*
         if (mGestureDetector.onTouchEvent(event)) {
             return true;

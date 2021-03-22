@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.tp06_ex01_02);
+        this.setContentView(R.layout.tp05_ex01_01);
         //PreferenceManager.setDefaultValues();
 
         //Tp03_ex01_01
@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
         */
 
         //tp05_ex01_01
-        /*
+
         Tp05_ex01_01 vue = this.findViewById(R.id.reticule);
         Tp05_ex01_03 controleur2 = new Tp05_ex01_03();
         Tp05_ex01_02 controleur1 = new Tp05_ex01_02(vue,controleur2);
@@ -61,8 +61,10 @@ public class MainActivity extends Activity {
         vue.setOnTouchListener(controleur1);
         //vue.setOnTouchListener(controleur2);
         //onscroll()
-        */
 
+
+        //tp06_ex01_02
+        /*
         TextView tv = findViewById(R.id.textViewTp06);
         Button[] array_button = new Button[4];
         Tp06_ex01_01 controleur = new Tp06_ex01_01(tv);
@@ -74,7 +76,27 @@ public class MainActivity extends Activity {
         for(int i = 0 ; i < 4 ; i++){
             array_button[i].setOnClickListener(controleur);
         }
+        */
 
+        //cm01_ex01_01
+        /*
+        RadioGroup monGroupeDeBouton = findViewById(R.id.le_groupe_de_boutons);
+        Cm01_ex02_01 vue = findViewById(R.id.grand_rectangle);
+        Cm01_ex03_01 controleur = new Cm01_ex03_01(vue);
+        monGroupeDeBouton.setOnCheckedChangeListener(controleur);
+        Cm01_ex04_01 controleurTouche = new Cm01_ex04_01(vue);
+        vue.setOnTouchListener(controleurTouche);
+        */
 
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle inState){
+        super.onRestoreInstanceState(inState);
     }
 }

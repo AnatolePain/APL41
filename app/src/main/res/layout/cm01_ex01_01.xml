@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     >
 
-    <View
+
+    <com.example.apl41.Cm01_ex02_01
         android:id="@+id/grand_rectangle"
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -16,6 +17,7 @@
         />
 
     <RadioGroup
+        android:id="@+id/le_groupe_de_boutons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/grand_rectangle"

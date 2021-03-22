@@ -13,9 +13,11 @@ public class Tp06_ex01_02 extends PreferenceActivity {
         this.addPreferencesFromResource(R.xml.tp06_ex01_01);
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         this.getMenuInflater().inflate(R.menu.tp06_ex01_01);
         return true;
     }
+    */
 }

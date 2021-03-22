@@ -15,6 +15,10 @@ public class Tp05_ex01_01 extends View {
 
     private Path reticule;
     private Paint couleur;
+
+    private float saveReticuleX;
+    private float saveReticuleY;
+
     private float reticuleX;
     private float reticuleY;
     private GestureDetector geste;
@@ -24,6 +28,9 @@ public class Tp05_ex01_01 extends View {
 
         this.reticuleX = 0;
         this.reticuleY = 0;
+
+        this.saveReticuleX = 0;
+        this.saveReticuleY = 0;
 
         int largeur = 200;
         int rayon = 50;
@@ -53,8 +60,17 @@ public class Tp05_ex01_01 extends View {
         canvas.drawRect(0, 0, this.getMeasuredWidth(), this.getMeasuredHeight(), gris);
 
         //reticule
-        reticule.offset(200,300);
+        reticule.offset(-this.saveReticuleX,-this.saveReticuleY);
+        reticule.offset(this.reticuleX,this.reticuleY);
+        this.saveReticuleX = reticuleX;
+        this.saveReticuleY = reticuleY;
         canvas.drawPath(reticule,couleur);
+    }
+
+    public void refresh(float x , float y){
+        this.reticuleX = x;
+        this.reticuleY = y;
+        this.invalidate();
     }
 
 }
